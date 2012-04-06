@@ -4,55 +4,76 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
-    
+
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp" >
 
-       <ImageView
-        android:src="@drawable/origin"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/A" />
+        <ImageView
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/A"
+            android:src="@drawable/origin" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/placeA"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_width="220dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:inputType="textPostalAddress" >
-
+         />
             <requestFocus />
-        </EditText>
+        </AutoCompleteTextView>
     </TableRow>
-
     <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/chkOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DBsearch" />
+    </TableRow>
+<TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp" >
 
         <ImageView
-        android:src="@drawable/destination"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@string/B" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/B"
+            android:src="@drawable/destination" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/placeB"
-            android:layout_width="250dp"
+            android:layout_width="220dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textPostalAddress" />
+    </TableRow>
+<TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/chkDestination"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPostalAddress" >
-        </EditText>
+            android:text="@string/DBsearch" />
     </TableRow>
 
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-
         <ImageButton
             android:id="@+id/btnDrivingMode"
             android:layout_width="60dp"
@@ -74,7 +95,7 @@
             android:id="@+id/btnBicyclingMode"
             android:layout_width="60dp"
             android:layout_height="38dp"
-            android:layout_marginTop="10dp"            
+            android:layout_marginTop="10dp"
             android:contentDescription="@string/bicycling"
             android:src="@drawable/bicycling" />
 
@@ -82,8 +103,8 @@
             android:id="@+id/btnGetDirection"
             android:layout_width="60dp"
             android:layout_height="38dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
             android:contentDescription="@string/search"
             android:src="@drawable/find" />
     </TableRow>

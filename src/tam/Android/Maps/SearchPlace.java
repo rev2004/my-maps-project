@@ -1,9 +1,6 @@
 package tam.Android.Maps;
 
-import java.util.ArrayList;
-
 import tam.Android.Database.MapDatabase;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,10 +30,7 @@ public class SearchPlace extends Activity {
 		ImageButton btnSearch = (ImageButton) findViewById(R.id.btnSearch);
 		
 		final AutoCompleteTextView placeToSearch = (AutoCompleteTextView) findViewById(R.id.placeToSearch); //<< xai` cai nay` de autocomplete
-		MapDatabase db = new MapDatabase(getBaseContext());
-		final ArrayList<String> dbList = db.getAllLocations();
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.mylistview, dbList);
-		placeToSearch.setAdapter(adapter);
+		placeToSearch.setAdapter(new ArrayAdapter<String>(getBaseContext(), R.layout.mylistview, new MapDatabase(getBaseContext()).getAllLocations()));
 		//placeToSearch.setText("273 An Duong Vuong, Quan 5, Tp. HCM");
 		placeToSearch.addTextChangedListener(new TextWatcher() {
 			

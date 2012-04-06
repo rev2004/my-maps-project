@@ -28,6 +28,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.text.Html;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -177,7 +178,6 @@ public class MapsActivity extends MapActivity {
 		{
 			new SearchPlaceTask().execute(data.getStringExtra("placeToSearch"));
 		} else if (resultCode == 2) {
-			
 			new GetDirectionTask().execute(data.getStringExtra("origin"),data.getStringExtra("destination"),data.getStringExtra("mode"));
 		}
 	}
@@ -353,8 +353,6 @@ public class MapsActivity extends MapActivity {
 
 	// http://developer.android.com/reference/android/os/AsyncTask.html
 	public class SearchPlaceTask extends AsyncTask<String, Void, GeoPoint> {
-		private String place;
-		
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			progressDialog = new ProgressDialog(MapsActivity.this);
@@ -365,8 +363,9 @@ public class MapsActivity extends MapActivity {
 		@Override
 		protected GeoPoint doInBackground(String... urls) {
 			// TODO Auto-generated method stub
-			place = urls[0];
-			return new SearchPlaceAPI(urls[0]).getResult();
+			GeoPoint gp = db.getLocation(urls[0]);
+			if (gp == null) gp = new SearchPlaceAPI(urls[0]).getResult();
+			return gp;
 		}
 
 		@Override
@@ -377,7 +376,6 @@ public class MapsActivity extends MapActivity {
 		@Override
 		protected void onPostExecute(GeoPoint gp) {
 			// TODO Auto-generated method stub
-			if (gp == null) gp = db.getLocation(place);
 			if (gp != null) {
 				mapView.getOverlays().clear();
 				mapView.setBuiltInZoomControls(true);
@@ -428,6 +426,7 @@ public class MapsActivity extends MapActivity {
 		@Override
 		protected void onPostExecute(GeoPoint gp) {
 			if (gp != null) {
+				Log.v("point", gp.getLatitudeE6() + " " + Double.toString(gp.getLatitudeE6()));
 				long id = db.insertPlace(name,
 						Double.toString(gp.getLatitudeE6()),
 						Double.toString(gp.getLongitudeE6()));

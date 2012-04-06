@@ -94,20 +94,16 @@ public class MapDatabase {
 	public GeoPoint getLocation(String place) {
 		open();
 		GeoPoint gp = null;
-		String query = "SELECT * FROM " + DATABASE_TABLE + " WHERE " + KEY_NAME + " like '%" + place + "%'";
-		Cursor cursor = db.rawQuery(query , null);
-		// 2 cai y chang
-		/*
 		Cursor cursor = db.query(true, DATABASE_TABLE, new String[] { KEY_ROWID,
 				KEY_NAME, KEY_LAT, KEY_LNG }, 
                 KEY_NAME + " = ?", new String[] { place }, null, null, null, null);
-        */
-		cursor.moveToFirst();
+        cursor.moveToFirst();
 		while (cursor.isAfterLast() == false)
 		{
-			String lat = cursor.getString(cursor.getColumnIndex(KEY_LAT));
-			String lng = cursor.getString(cursor.getColumnIndex(KEY_LNG));
-			gp = new GeoPoint(Integer.parseInt(lat), Integer.parseInt(lng));
+			Double lat = cursor.getDouble(2);
+			Double lng = cursor.getDouble(3);
+
+			gp = new GeoPoint(lat.intValue(), lng.intValue());
 			cursor.moveToNext();
 		}
 		cursor.close();
