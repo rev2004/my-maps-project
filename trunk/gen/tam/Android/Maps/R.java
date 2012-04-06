@@ -29,37 +29,39 @@ public final class R {
         public static final int walking=0x7f02000f;
     }
     public static final class id {
-        public static final int ScrollView01=0x7f060019;
-        public static final int add_place=0x7f06001e;
+        public static final int ScrollView01=0x7f06001b;
+        public static final int add_place=0x7f060020;
         public static final int btnAddPlace=0x7f060003;
-        public static final int btnBicyclingMode=0x7f060009;
+        public static final int btnBicyclingMode=0x7f06000b;
         public static final int btnCancel=0x7f060004;
-        public static final int btnDrivingMode=0x7f060007;
-        public static final int btnGetDirection=0x7f06000a;
-        public static final int btnSearch=0x7f060010;
-        public static final int btnShowPath=0x7f06001b;
-        public static final int btnWalkingMode=0x7f060008;
-        public static final int distance=0x7f060016;
-        public static final int duration=0x7f060018;
-        public static final int get_direction=0x7f06001d;
-        public static final int imageA=0x7f06000e;
+        public static final int btnDrivingMode=0x7f060009;
+        public static final int btnGetDirection=0x7f06000c;
+        public static final int btnSearch=0x7f060012;
+        public static final int btnShowPath=0x7f06001d;
+        public static final int btnWalkingMode=0x7f06000a;
+        public static final int chkDestination=0x7f060008;
+        public static final int chkOrigin=0x7f060006;
+        public static final int distance=0x7f060018;
+        public static final int duration=0x7f06001a;
+        public static final int get_direction=0x7f06001f;
+        public static final int imageA=0x7f060010;
         public static final int linearLayout1=0x7f060000;
-        public static final int mapView=0x7f06000b;
-        public static final int myMapView=0x7f06000d;
-        public static final int myPath=0x7f06000c;
-        public static final int name=0x7f060012;
+        public static final int mapView=0x7f06000d;
+        public static final int myMapView=0x7f06000f;
+        public static final int myPath=0x7f06000e;
+        public static final int name=0x7f060014;
         public static final int placeA=0x7f060005;
-        public static final int placeB=0x7f060006;
-        public static final int placeToSearch=0x7f06000f;
-        public static final int route=0x7f06001a;
-        public static final int row1=0x7f060011;
-        public static final int row2=0x7f060013;
-        public static final int row3=0x7f060015;
-        public static final int row4=0x7f060017;
-        public static final int search_place=0x7f06001c;
+        public static final int placeB=0x7f060007;
+        public static final int placeToSearch=0x7f060011;
+        public static final int route=0x7f06001c;
+        public static final int row1=0x7f060013;
+        public static final int row2=0x7f060015;
+        public static final int row3=0x7f060017;
+        public static final int row4=0x7f060019;
+        public static final int search_place=0x7f06001e;
         public static final int txtAddress=0x7f060002;
         public static final int txtName=0x7f060001;
-        public static final int via=0x7f060014;
+        public static final int via=0x7f060016;
     }
     public static final class layout {
         public static final int addplace=0x7f030000;
@@ -76,6 +78,7 @@ public final class R {
     public static final class string {
         public static final int A=0x7f040002;
         public static final int B=0x7f040003;
+        public static final int DBsearch=0x7f04000f;
         public static final int add=0x7f040009;
         public static final int address=0x7f04000c;
         public static final int app_name=0x7f040001;

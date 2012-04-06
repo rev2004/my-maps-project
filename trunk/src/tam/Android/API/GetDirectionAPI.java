@@ -23,6 +23,7 @@ public class GetDirectionAPI {
 	
 	public GetDirectionAPI(String origin, String destination, String mode)
 	{
+		//luc tim co nen trim() ?
 		url = URL_GET_DIRECTION;
 		url = url.replace("{0}", URLEncoder.encode(origin));
 		url = url.replace("{1}", URLEncoder.encode(destination));

@@ -9,11 +9,12 @@
     <string name="driving">Driving</string>
     <string name="walking">Walking</string>
     <string name="bicycling">Bicycling</string>
-	<string name="map_api_key">0Ykw2eTU5bQTCDMhlVBKbXH6hb5wVjdOyljbDBA</string>
-	<string name="add">Add</string>
-	<string name="cancel">Cancel</string>
-	<string name="name">Name</string>
-	<string name="address">Address</string>
-	<string name="showpath">Show Path</string>
-	<string name="description">Description</string>
+    <string name="map_api_key">0Ykw2eTU5bQTCDMhlVBKbXH6hb5wVjdOyljbDBA</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="showpath">Show Path</string>
+    <string name="description">Description</string>
+    <string name="DBsearch">Search in DB</string>
 </resources>
