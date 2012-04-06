@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/search_place"
+        android:title="Search Place"
+        android:icon="@drawable/search"/>
+    <item
+        android:id="@+id/get_direction"
+        android:title="Get Direction"
+        android:icon="@drawable/direction"/>
+    <item
+        android:id="@+id/add_place"
+        android:title="Add Place"
+        android:icon="@drawable/add"/>
+
+</menu>
